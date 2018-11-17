@@ -16,6 +16,7 @@ import * as products from '../../carservices.json';
 export class ServicesPage {
 
   serviceList: Array<Object> = [];
+  activeServices: Array<Object> = [];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -26,6 +27,36 @@ export class ServicesPage {
   }
 
 
+  getServices(item){
+    //setting the active property if it is present
+    if(item.hasOwnProperty('active'))
+    {
+      let status = !item.active
+      item.active = status
+    }
+    //setting the active property if it already not present in the object
+    else
+    {
+      item["active"] = true;
+    }
+    console.log(item);
+  }
 
+  submitServices()
+  {
+    //separating out the active objects and sending the array of these objects
+    for(let items of this.serviceList)
+    {
+      if(items.hasOwnProperty('active'))
+      {
+        if(items['active'])
+        {
+          this.activeServices.push(items);
+        }
+      }
+    }
+
+    console.log(this.activeServices);
+  }
 
 }
