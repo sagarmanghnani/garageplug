@@ -1,3 +1,24 @@
 page-home {
 
-}
+    .upperHalf{
+        height: 50vh;
+        background-color: #f8f8f8;
+        .imageConfig{
+            max-width: 68%;
+            margin-left: 21%;
+            margin-top: 50%;
+            }
+        }
+    }
+
+    .lowerHalf{
+        .btns{
+            display: flex;
+            margin: auto;
+            // center button horizontally has to be set
+            margin-top: 35%;
+            color: color($colors, garageMain);
+            border-color: color($colors, garageMain);
+        }
+    }
+
