@@ -6,4 +6,15 @@ page-carsize {
         left: 41%;
     }
 
+    .active{
+        background-color: color($colors, garageMain);
+        color: white;
+    }
+
+    [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+
+        font-size: 50px;
+        // color: color($colors, garageMain);
+        }
+
 }

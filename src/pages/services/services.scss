@@ -13,10 +13,15 @@ page-services {
     [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
 
         font-size: 50px;
-        
+        // color: color($colors, garageMain);
         }
 
     .setCard{
         padding: 10%;
+    }
+
+    .active{
+        background-color: color($colors, garageMain);
+        color: white;
     }
 }

@@ -18,7 +18,7 @@
     <ion-grid>
         <ion-row>
           <ion-col col-4 *ngFor="let items of carSizeList" (click)="getCarSize(items)">
-            <ion-card>
+            <ion-card class="setCard" [ngClass]="{'active': items.active == true}">
               <i class="{{items.icon}} setIcon"></i>
         
             <ion-card-content>

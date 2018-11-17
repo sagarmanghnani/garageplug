@@ -17,7 +17,7 @@
   <ion-grid>
     <ion-row>
       <ion-col col-xs-6 col-sm-4 col-md-4 *ngFor="let items of serviceList" (click)="getServices(items)" text-center>
-        <ion-card class="setCard">
+        <ion-card class="setCard" [ngClass]="{'active': items.active == true}">
           <i class="{{items.icon}} setIcon"></i>
     
         <!-- <ion-card-content>
