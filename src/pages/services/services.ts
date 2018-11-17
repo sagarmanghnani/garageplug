@@ -33,14 +33,17 @@ export class ServicesPage {
     {
       this.alreadyActiveServices = this.navParams.get('services');
       console.log(this.alreadyActiveServices);
-      // for(let active in this.alreadyActiveServices)
-      // {
-      //   for(let items in this.serviceList)
-      //   {
-      //     active['id'] == items['id'];
-      //     items['active'] = true;
-      //   }
-      // }
+      for(let active of this.alreadyActiveServices)
+      {
+        for(let items of this.serviceList)
+        {
+          if(active['id'] == items['id'])
+          {
+            items['active'] = true;
+          }
+            
+        }
+      }
 
     }
     //ends here

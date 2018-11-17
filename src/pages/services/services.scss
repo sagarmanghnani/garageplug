@@ -9,4 +9,14 @@ page-services {
     .setIcon{
         font-size: 70%;
     }
+
+    [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+
+        font-size: 50px;
+        
+        }
+
+    .setCard{
+        padding: 10%;
+    }
 }
