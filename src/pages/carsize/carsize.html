@@ -6,13 +6,28 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>carsize</ion-title>
-  </ion-navbar>
-
-</ion-header>
+    <ion-navbar hideBackButton>
+      <ion-title end><img src = "../../assets/imgs/GaragePlug2.png" class = "imageConfig"/></ion-title>
+    </ion-navbar>
+  
+  </ion-header>
 
 
 <ion-content padding>
 
+    <ion-grid>
+        <ion-row>
+          <ion-col col-4 *ngFor="let items of carSizeList" (click)="getCarSize(items)">
+            <ion-card>
+              <i class="{{items.icon}} setIcon"></i>
+        
+            <ion-card-content>
+              <p>{{items.title}}</p>
+            </ion-card-content>
+          </ion-card>
+          </ion-col>
+        </ion-row>
+    
+        <!-- <button (click) = "submitServices()">submit</button> -->
+      </ion-grid>
 </ion-content>

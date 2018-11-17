@@ -1,0 +1,22 @@
+{
+    "carsize":[
+        {
+            "id": 1,
+            "size": "small",
+            "icon": "flaticon-paint-spray",
+            "value": 1000
+        },
+        {
+            "id": 2,
+            "size": "sedan",
+            "icon": "flaticon-carwash-machine",
+            "value": 2000
+        },
+        {
+            "id": 3,
+            "size": "hatchback",
+            "icon": "flaticon-oil",
+            "value": 3000
+        }
+    ]
+}
