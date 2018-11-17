@@ -7,22 +7,27 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ServicesPage } from '../pages/services/services';
+import { IonicStorageModule } from '@ionic/storage';
+import {CarsizePage} from '../pages/carsize/carsize';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ServicesPage,
+    CarsizePage,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ServicesPage
+    ServicesPage,
+    CarsizePage
   ],
   providers: [
     StatusBar,

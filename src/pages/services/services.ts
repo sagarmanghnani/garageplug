@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as products from '../../carservices.json';
+import { Storage } from '@ionic/storage';
+import {CarsizePage} from '../carsize/carsize';
 /**
  * Generated class for the ServicesPage page.
  *
@@ -17,13 +19,14 @@ export class ServicesPage {
 
   serviceList: Array<Object> = [];
   activeServices: Array<Object> = [];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ServicesPage');
     this.serviceList = products.services;
     console.log(this.serviceList);
+    this.activeServices = [];
   }
 
 
@@ -57,6 +60,12 @@ export class ServicesPage {
     }
 
     console.log(this.activeServices);
+    //storing the activeservice array in storage
+    this.storage.set('activeServices', this.activeServices);
+    this.navCtrl.push(CarsizePage, {
+      'activeServices': this.activeServices
+    })
+
   }
 
 }
