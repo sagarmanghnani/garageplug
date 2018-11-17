@@ -1,0 +1,7 @@
+{
+  "name": "garageplug",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
