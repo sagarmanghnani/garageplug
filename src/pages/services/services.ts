@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import * as products from '../../carservices.json';
 /**
  * Generated class for the ServicesPage page.
  *
@@ -15,11 +15,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ServicesPage {
 
+  serviceList: Array<Object> = [];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ServicesPage');
+    this.serviceList = products.services;
+    console.log(this.serviceList);
   }
+
+
+
 
 }
