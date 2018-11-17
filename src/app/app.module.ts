@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { ServicesPage } from '../pages/services/services';
 import { IonicStorageModule } from '@ionic/storage';
 import {CarsizePage} from '../pages/carsize/carsize';
+import {PricePage} from '../pages/price/price';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {CarsizePage} from '../pages/carsize/carsize';
     HomePage,
     ServicesPage,
     CarsizePage,
+    PricePage,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import {CarsizePage} from '../pages/carsize/carsize';
     MyApp,
     HomePage,
     ServicesPage,
-    CarsizePage
+    CarsizePage,
+    PricePage
   ],
   providers: [
     StatusBar,
