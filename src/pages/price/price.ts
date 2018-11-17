@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import {ServicesPage } from '../services/services';
 /**
  * Generated class for the PricePage page.
  *
@@ -56,6 +57,13 @@ export class PricePage {
     console.log(this.carServicePrice);
     console.log(this.totalAmount);
 
+  }
+
+  changeServices()
+  {
+    this.navCtrl.push(ServicesPage, {
+      'services':this.activeServices
+    })
   }
 
 

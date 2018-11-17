@@ -19,6 +19,7 @@ export class ServicesPage {
 
   serviceList: Array<Object> = [];
   activeServices: Array<Object> = [];
+  alreadyActiveServices: Array<Object> = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
 
@@ -27,6 +28,22 @@ export class ServicesPage {
     this.serviceList = products.services;
     console.log(this.serviceList);
     this.activeServices = [];
+    //new code here
+    if(this.navParams.get('services'))
+    {
+      this.alreadyActiveServices = this.navParams.get('services');
+      console.log(this.alreadyActiveServices);
+      // for(let active in this.alreadyActiveServices)
+      // {
+      //   for(let items in this.serviceList)
+      //   {
+      //     active['id'] == items['id'];
+      //     items['active'] = true;
+      //   }
+      // }
+
+    }
+    //ends here
   }
 
 
