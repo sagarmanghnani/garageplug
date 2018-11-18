@@ -20,6 +20,7 @@ export class ServicesPage {
   serviceList: Array<Object> = [];
   activeServices: Array<Object> = [];
   alreadyActiveServices: Array<Object> = [];
+  carSize:any = '';
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
 
@@ -28,9 +29,12 @@ export class ServicesPage {
     this.serviceList = products.services;
     console.log(this.serviceList);
     this.activeServices = [];
-    //new code here
+    
     if(this.navParams.get('services'))
     {
+      //new code here
+      this.carSize = this.navParams.get('carSize');
+      //ends here
       this.alreadyActiveServices = this.navParams.get('services');
       console.log(this.alreadyActiveServices);
       for(let active of this.alreadyActiveServices)
@@ -46,7 +50,7 @@ export class ServicesPage {
       }
 
     }
-    //ends here
+    
   }
 
 
@@ -83,7 +87,8 @@ export class ServicesPage {
     //storing the activeservice array in storage
     this.storage.set('activeServices', this.activeServices);
     this.navCtrl.push(CarsizePage, {
-      'activeServices': this.activeServices
+      'activeServices': this.activeServices,
+      'carSize': this.carSize
     })
 
   }

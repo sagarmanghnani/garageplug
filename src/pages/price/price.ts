@@ -62,7 +62,8 @@ export class PricePage {
   changeServices()
   {
     this.navCtrl.push(ServicesPage, {
-      'services':this.activeServices
+      'services':this.activeServices,
+      'carSize': this.carSize
     })
   }
 

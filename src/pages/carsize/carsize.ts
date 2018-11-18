@@ -19,6 +19,7 @@ export class CarsizePage {
 
   carSizeList: Array<Object> = [];
   activeCarSize:any;
+  changes:boolean = false;
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage:Storage) {
   }
 
@@ -26,6 +27,14 @@ export class CarsizePage {
     console.log('ionViewDidLoad CarsizePage');
     this.carSizeList = products.carsize;
     console.log(this.carSizeList);
+    //new code here
+    
+    if(this.navParams.get('carSize'))
+    {
+      this.activeCarSize = this.navParams.get('carSize');
+      this.changes = true;
+    }
+    //ends here
   }
 
   getCarSize(item)
@@ -33,21 +42,40 @@ export class CarsizePage {
     //if object has property active then
     if(item.hasOwnProperty('active'))
     {
+     //starts here
+
+     if(this.activeCarSize)
+     {
+       //if activeCarSize is present then
+       if(this.activeCarSize.id != item.id)
+       {
+         //if activeCarSize does not matched with selected object make older activecarsize to false and assign new carsize
+         this.activeCarSize.active = false;
+         //new code here
+
+         if(this.changes)
+         {
+           for(let items of this.carSizeList)
+           {
+             if(this.activeCarSize.id == items.id)
+             {
+               items['active'] = false;
+             }
+             
+           }
+         }
+
+         //ends here
+         this.activeCarSize = item;
+       }
+     //changes ends here
       //if object active property is false then
       if(!item.active)
       {
         //make item active property true
         item.active = true;
       }
-      if(this.activeCarSize)
-      {
-        //if activeCarSize is present then
-        if(this.activeCarSize.id != item.id)
-        {
-          //if activeCarSize does not matched with selected object make older activecarsize to false and assign new carsize
-          this.activeCarSize.active = false;
-          this.activeCarSize = item;
-        }
+     
       }
       else
       {
@@ -65,6 +93,20 @@ export class CarsizePage {
         {
           //check if car size is same as selected car size, if not then set older car size to false and set selected car size to true
           this.activeCarSize['active'] = false;
+          //new code here
+          if(this.changes)
+          {
+            for(let items of this.carSizeList)
+            {
+              if(this.activeCarSize.id == items.id)
+              {
+                items['active'] = false;
+              }
+              
+            }
+          }
+          //ends here
+          console.log(this.activeCarSize);
         }
       }
       this.activeCarSize = item;
