@@ -17,14 +17,15 @@
 
     <ion-grid>
         <ion-row>
-          <ion-col col-4 *ngFor="let items of carSizeList" (click)="getCarSize(items)">
+          <ion-col col-4 *ngFor="let items of carSizeList" (click)="getCarSize(items)" text-center>
             <ion-card class="setCard" [ngClass]="{'active': items.active == true}">
               <i class="{{items.icon}} setIcon"></i>
         
-            <ion-card-content>
+            <!-- <ion-card-content>
               <p>{{items.title}}</p>
-            </ion-card-content>
+            </ion-card-content> -->
           </ion-card>
+          <p>{{items.size}}</p>
           </ion-col>
 
           <button type="button" (click) = "submitCarSize()">submit</button>

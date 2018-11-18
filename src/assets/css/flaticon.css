@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 17/11/2018 09:36
+  	Creation date: 18/11/2018 04:01
   	*/
 
 @font-face {
@@ -29,6 +29,27 @@ font-style: normal;
 margin-left: 20px;
 }
 
-.flaticon-paint-spray:before { content: "\f100"; }
-.flaticon-carwash-machine:before { content: "\f101"; }
-.flaticon-oil:before { content: "\f102"; }
+.flaticon-hatchback:before { content: "\f100"; }
+.flaticon-minivan:before { content: "\f101"; }
+.flaticon-car:before { content: "\f102"; }
+.flaticon-pickup-truck:before { content: "\f103"; }
+.flaticon-van:before { content: "\f104"; }
+.flaticon-car-1:before { content: "\f105"; }
+.flaticon-taxi:before { content: "\f106"; }
+.flaticon-electric-car:before { content: "\f107"; }
+.flaticon-service:before { content: "\f108"; }
+.flaticon-spray-gun:before { content: "\f109"; }
+.flaticon-rent-a-car-service:before { content: "\f10a"; }
+.flaticon-paint-spray:before { content: "\f10b"; }
+.flaticon-car-3:before { content: "\f10c"; }
+.flaticon-taxi-service:before { content: "\f10d"; }
+.flaticon-pump:before { content: "\f10e"; }
+.flaticon-building:before { content: "\f10f"; }
+.flaticon-electrical-service:before { content: "\f110"; }
+.flaticon-disc-brake:before { content: "\f111"; }
+.flaticon-maintenance:before { content: "\f112"; }
+.flaticon-trailer:before { content: "\f113"; }
+.flaticon-ignition:before { content: "\f114"; }
+.flaticon-carwash:before { content: "\f115"; }
+.flaticon-carwash-machine:before { content: "\f116"; }
+.flaticon-oil:before { content: "\f117"; }
