@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import * as products from '../../cartypes.json';
+import  products from '../../cartypes.js';
 import { Storage } from '@ionic/storage';
 import {PricePage} from '../price/price';
 /**
@@ -57,7 +57,7 @@ export class CarsizePage {
          {
            for(let items of this.carSizeList)
            {
-             if(this.activeCarSize.id == items.id)
+             if(this.activeCarSize.id == items['id'])
              {
                items['active'] = false;
              }
@@ -100,7 +100,7 @@ export class CarsizePage {
             //check for object matching the activecarsize and make it to false as other carsize is selected
             for(let items of this.carSizeList)
             {
-              if(this.activeCarSize.id == items.id)
+              if(this.activeCarSize.id == items['id'])
               {
                 items['active'] = false;
               }

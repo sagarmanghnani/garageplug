@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import * as products from '../../carservices.json';
+import  products from '../../carservices.js';
 import { Storage } from '@ionic/storage';
 import {CarsizePage} from '../carsize/carsize';
 /**

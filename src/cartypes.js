@@ -1,4 +1,4 @@
-{
+export default{
     "carsize":[
         {
             "id": 1,

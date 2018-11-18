@@ -18,7 +18,7 @@ export class PricePage {
 
   activeServices : Array<Object> = [];
   carSize: any;
-  servicesPrice: Array<Object> = [];
+  servicesPrice = [];
   amount:number = 0;
   carServicePrice = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
@@ -47,7 +47,7 @@ export class PricePage {
     // I need to test the reduce function also
     for(let item of this.activeServices)
     {
-      this.servicesPrice.push(item.value);
+      this.servicesPrice.push(item['value']);
     }
     this.carServicePrice = this.servicesPrice.map(val => {
       return (this.carSize.value * val);

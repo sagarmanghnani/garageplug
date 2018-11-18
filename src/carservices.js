@@ -1,4 +1,4 @@
-{
+export default{
     "services": [
         {
                 "id": 1,
