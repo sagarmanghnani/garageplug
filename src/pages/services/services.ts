@@ -86,6 +86,8 @@ export class ServicesPage {
     console.log(this.activeServices);
     //storing the activeservice array in storage
     this.storage.set('activeServices', this.activeServices);
+    console.log("change");
+    console.log(this.activeServices);
     this.navCtrl.push(CarsizePage, {
       'activeServices': this.activeServices,
       'carSize': this.carSize

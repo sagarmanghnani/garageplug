@@ -1,3 +1,73 @@
 page-price {
 
+    .setCard{
+        padding: 10%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imageConfig{
+        max-width: 200px;
+        position: relative;
+        left: 41%;
+    }
+
+    [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+
+        display: flex;
+        margin: auto !important;
+        font-size: 50px;
+        
+        // color: color($colors, garageMain);
+        }
+
+    .btns{
+        color: color($colors, garageMain);
+        border-color: color($colors, garageMain);
+    }
+    .hrline{
+        border: solid 1px;
+        width: 100%;
+        border-color: color($colors, garageMain);
+    }
+    .amount{
+        text-align: right;
+        position: absolute;
+        right: 0;
+        margin-right: 5%;
+        // font-size: 1.6em;
+
+    }
+
+    .priceTitle{
+        color: #12926f;
+        // font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .fixPadding{
+        margin-left: 4%;
+    }
+
+    .priceText{
+        color: #12926f;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-transform: capitalize;
+    }
+    .setMargin{
+        margin-top: 2%;
+    }
+    .amounts{
+        font-size: 1.3em;
+    }
+
+    .totalMoney{
+        position: absolute;
+        right: 0;
+    }
 }
+

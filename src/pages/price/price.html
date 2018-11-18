@@ -15,37 +15,48 @@
 
 <ion-content padding>
   <ion-grid>
+      <ion-row>
+          <ion-col text-center class="serviceTitle">
+            <h3 class="priceTitle">PRICE</h3>
+          </ion-col>
+        </ion-row>
     <ion-row>
-      <p>Selected Services</p>
+      <p class="fixPadding priceText">Selected Services</p>
     </ion-row>
     <ion-row *ngIf = "carSize && activeServices">
-      <ion-col col-4 *ngFor="let items of activeServices" >
-          <ion-card>
+      <ion-col col-4 *ngFor="let items of activeServices" text-center >
+          <ion-card  class="setCard">
               <i class="{{items.icon}} setIcon"></i>
         
-            <ion-card-content>
-              <p>{{items.title}}</p>
-            </ion-card-content>
+            
           </ion-card>
+          <p class="priceText">{{items.title}}</p>
       </ion-col>
     </ion-row>
     <ion-row>
-      <button (click)= "changeServices()">Change</button>
+      <button ion-button round outline class = "btns" (click)= "changeServices()">Change</button>
     </ion-row>
 
-    <ion-row *ngIf = "carSize">
+    <ion-row>
+      <p class="fixPadding priceText">Car Size</p>
+    </ion-row>
+    <ion-row *ngIf = "carSize" text-center>
       <ion-col col-4>
-        <ion-card>
+        <ion-card class="setCard">
           <i class="{{carSize.icon}} setIcon"></i>
           
-          <ion-card-content>
-              <p>{{carSize.title}}</p>
-            </ion-card-content>
 
         </ion-card>
+        <p class="priceText">{{carSize.size}}</p>
       </ion-col>
     </ion-row>
-
-    <button (click) = "totalAmount()">Submit</button>
-  </ion-grid>
+    <hr class="hrline">
+    <ion-row>
+      <ion-col>
+        <p class="amounts">TOTAL PRICE:- <span *ngIf="totalAmount" class="totalMoney">Rs{{totalAmount}}</span></p>
+        <!-- <p *ngIf="totalAmount">{{totalAmount}}</p>  -->
+      </ion-col>
+    </ion-row>
+    <button ion-button round outline class = "btns ">Continue</button>
+  </ion-grid> 
 </ion-content>

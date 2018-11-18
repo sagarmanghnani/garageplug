@@ -8,20 +8,42 @@ page-services {
 
     .setIcon{
         font-size: 70%;
+        
     }
 
     [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
 
         font-size: 50px;
+        display: flex;
+        margin: auto;
         // color: color($colors, garageMain);
         }
 
     .setCard{
         padding: 10%;
+        border-radius: 10px;
     }
 
     .active{
         background-color: color($colors, garageMain);
         color: white;
+    }
+
+    .btns{
+        color: color($colors, garageMain);
+        border-color: color($colors, garageMain);
+    }
+
+    .serviceTitle{
+        color: #12926f;
+    // font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .serviceType{
+        color: #12926f;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-transform: capitalize;
     }
 }

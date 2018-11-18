@@ -16,6 +16,12 @@
 <ion-content padding>
 
     <ion-grid>
+
+        <ion-row>
+            <ion-col text-center class="serviceTitle">
+              <h3 class="carSizeTitle">CARSIZE</h3>
+            </ion-col>
+          </ion-row>
         <ion-row>
           <ion-col col-4 *ngFor="let items of carSizeList" (click)="getCarSize(items)" text-center>
             <ion-card class="setCard" [ngClass]="{'active': items.active == true}">
@@ -25,10 +31,10 @@
               <p>{{items.title}}</p>
             </ion-card-content> -->
           </ion-card>
-          <p>{{items.size}}</p>
+          <p class="carType">{{items.size}}</p>
           </ion-col>
 
-          <button type="button" (click) = "submitCarSize()">submit</button>
+          <button ion-button round outline class="btns" (click) = "submitCarSize()">submit</button>
         </ion-row>
     
         <!-- <button (click) = "submitServices()">submit</button> -->

@@ -35,7 +35,9 @@ export class PricePage {
       this.activeServices = val;
       this.storage.get('carSize').then((val) => {
         this.carSize = val;
+        this.totalAmount();
         console.log(this.carSize);
+        console.log(this.activeServices)
       })
     });
   }

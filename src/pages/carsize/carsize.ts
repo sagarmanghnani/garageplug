@@ -94,8 +94,10 @@ export class CarsizePage {
           //check if car size is same as selected car size, if not then set older car size to false and set selected car size to true
           this.activeCarSize['active'] = false;
           //new code here
+          //if changes are made in the carsize then
           if(this.changes)
           {
+            //check for object matching the activecarsize and make it to false as other carsize is selected
             for(let items of this.carSizeList)
             {
               if(this.activeCarSize.id == items.id)
@@ -119,6 +121,7 @@ export class CarsizePage {
 
   submitCarSize()
   {
+    console.log(this.activeCarSize);
     this.storage.set('carSize', this.activeCarSize);
     this.navCtrl.push(PricePage, {
       'carSize':this.activeCarSize
